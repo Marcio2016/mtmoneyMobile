@@ -1,15 +1,18 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import BalancePanel from '../../components/BalancePanel';
-import EntrySummary from '../../components/EntrySummary';
-import EntryList from '../../components/EntryList';
+// import BalancePanel from '../../components/BalancePanel';
+// import EntrySummary from '../../components/EntrySummary';
+// import EntryList from '../../components/EntryList';
+
+import NewEntry from '../../pages/NewEntry'
 
 const Main = () => {
   return (
     <View style={styles.Container}>
-      <BalancePanel />
+      {/* <BalancePanel />
       <EntrySummary />
-      <EntryList />
+      <EntryList /> */}
+      <NewEntry/>
     </View>
   );
 };
