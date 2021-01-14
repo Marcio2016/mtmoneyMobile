@@ -3,10 +3,10 @@ import {View, FlatList, Text, StyleSheet} from 'react-native';
 
 // import { Container } from './styles';
 
-const EntrySummaryList = () => {
+const EntryListItem = () => {
   return (
     <View style={styles.Container}>
-      <Text style={styles.label}>Catergorias</Text>
+      <Text style={styles.label}>Outros lançamentos</Text>
       <FlatList
         data={[
           {key: 'Alimentção: R$ 100'},
@@ -25,7 +25,10 @@ const styles = StyleSheet.create({
     // flex: 1,
     alignItems: 'center',
   },
-  label: {fontWeight: 'bold', fontSize: 18},
+  label: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
 
-export default EntrySummaryList;
+export default EntryListItem;
