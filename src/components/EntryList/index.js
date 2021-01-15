@@ -13,7 +13,7 @@ const EntryList = () => {
 const styles = StyleSheet.create({
   Container: {
     // flex: 1,
-    alignItems: 'center',
+    // alignItems: 'center',
   },
 });
 

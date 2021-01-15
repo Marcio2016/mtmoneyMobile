@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, StyleSheet,Picker ,Button} from 'react-native';
 
 import EntryLabel from '../../components/BalanceLabel'
@@ -6,22 +6,33 @@ import EntrySummary from '../../components/EntrySummary';
 import EntryList from '../../components/EntryList';
 
 const Report = () => {
+  const [selectedValue, setSelectedValue] = useState("java");
   return (
-  <View style={styles.container}>
+  <View >
     <EntryLabel/>
     <View>
-      <Picker>
-        <Picker.item label='Todas as categorias'/>
+    <Picker
+        selectedValue={selectedValue}
+        style={{ height: 50, width: 150 }}
+        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+      >
+        <Picker.Item label="Java" value="java" />
+        <Picker.Item label="JavaScript" value="js" />
       </Picker>
-      <Picker>
-        <Picker.item label='Últimos 7 dias'/>
+      <Picker
+        selectedValue={selectedValue}
+        style={{ height: 50, width: 150 }}
+        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+      >
+        <Picker.Item label="Java" value="java" />
+        <Picker.Item label="JavaScript" value="js" />
       </Picker>
     </View>
     <EntrySummary/>
     <EntryList/>
-    <View>
-      <Button title='adicionar'/>
-      <Button title='cancelar'/>
+    <View >
+      <Button title="adicionar"/>
+      <Button title="cancelar"/>
     </View>
   </View>
   );
@@ -29,8 +40,11 @@ const Report = () => {
 
 const styles = StyleSheet.create({
   container:{
-    flex: 1,
+      flex: 2,
   },
+  teste:{
+    flex: 2,
+},
 });
 
 export default Report;
