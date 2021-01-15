@@ -1,18 +1,20 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-// import BalancePanel from '../../components/BalancePanel';
-// import EntrySummary from '../../components/EntrySummary';
-// import EntryList from '../../components/EntryList';
+import {View, StyleSheet, Button} from 'react-native';
+import BalancePanel from '../../components/BalancePanel';
+import EntrySummary from '../../components/EntrySummary';
+import EntryList from '../../components/EntryList';
 
-import NewEntry from '../../pages/NewEntry'
+const Main = ({navigation}) => {
+  const onNewEntry = () => {
+    navigation.navigate('NewEntry');
+  };
 
-const Main = () => {
   return (
     <View style={styles.Container}>
-      {/* <BalancePanel />
+      <BalancePanel />
+      <Button title="Adicionar" onPress={onNewEntry} />
       <EntrySummary />
-      <EntryList /> */}
-      <NewEntry/>
+      <EntryList />
     </View>
   );
 };

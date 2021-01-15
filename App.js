@@ -1,8 +1,8 @@
 import React from 'react';
-// import {SafeAreaView, StyleSheet, Text, Button, FlatList} from 'react-native';
-import Main from './src/pages/Main';
+import Routes from './src/routes';
+
 const App = () => {
-  return <Main />;
+  return <Routes />;
 };
 
 export default App;
