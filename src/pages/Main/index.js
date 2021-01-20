@@ -8,10 +8,10 @@ const Main = ({navigation}) => {
   const onNewEntry = () => {
     navigation.navigate('NewEntry');
   };
-
+  const saldo = 10.0;
   return (
     <View style={styles.Container}>
-      <BalancePanel />
+      <BalancePanel currentBalance={saldo} />
       <Button title="Adicionar" onPress={onNewEntry} />
       <EntrySummary />
       <EntryList />
