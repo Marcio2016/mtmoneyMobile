@@ -9,6 +9,12 @@ const Main = ({navigation}) => {
     navigation.navigate('NewEntry');
   };
   const saldo = 10.0;
+  const data = [
+    {key: 'Alimentção: R$ 100'},
+    {key: 'Lazer: R$ 80'},
+    {key: 'Farmacia: R$ 57'},
+    {key: 'Outros: R$ 64'},
+  ];
   return (
     <View style={styles.Container}>
       <BalancePanel currentBalance={saldo} />
