@@ -7,7 +7,7 @@ import BalancePanelChart from './BalancePanelChart';
 const BalancePanel = ({currentBalance}) => {
   return (
     <View style={styles.container}>
-      <BalancePanelLabel currenctBalance={currentBalance} />
+      <BalancePanelLabel currentBalance={currentBalance} />
       <BalancePanelChart />
       {/* <Button title="adicionar" /> */}
     </View>
