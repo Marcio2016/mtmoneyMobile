@@ -1,19 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, TextInput, StyleSheet, Button} from 'react-native';
 
 import BalanceLabel from '../../components/BalanceLabel';
 
+import {saveEntry} from '../../services/Entries';
+
 const NewEntry = ({navigation}) => {
   const currentBalance = 2065.35;
+  const [amount, setAmount] = useState('0.00');
+
+  const save = () => {
+    const value = {
+      amount: parseFloat(amount),
+    };
+    saveEntry(value);
+  };
+
   return (
     <View sytle={styles.container}>
       <BalanceLabel currentbalance={currentBalance} />
       <View>
-        <TextInput style={styles.input} />
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => setAmount(text)}
+          value={amount}
+        />
         <TextInput style={styles.input} />
         <Button title="camera" />
         <Button title="GPS" />
-        <Button title="Add" />
+        <Button title="Add" onPress={save} />
         <Button title="cancel" onPress={() => navigation.goBack()} />
       </View>
     </View>
